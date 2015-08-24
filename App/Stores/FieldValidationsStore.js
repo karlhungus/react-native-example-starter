@@ -5,6 +5,8 @@ const VALIDATION_ACTION = 'fieldValidation';
 
 class FieldValidationsStore extends EventEmitter {
   constructor() {
+    super();
+
     Dispatcher.register((action) => {
       if(!action.type === VALIDATION_ACTION) { return; }
 

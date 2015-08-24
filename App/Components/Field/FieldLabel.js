@@ -10,9 +10,15 @@ var {
 } = React;
 
 class Label extends Component {
-  render() {}
+  render() {
+    return (<View>
+      <Text>{this.props.children.toUpperCase()}</Text>
+    </View>);
+  }
 }
 
-Label.propTypes = {};
+Label.propTypes = {
+  children: PropTypes.string.isRequired
+};
 
 module.exports = Label;
